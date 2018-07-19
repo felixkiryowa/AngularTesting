@@ -1,0 +1,25 @@
+<h5 align="center"> All System Users</h5>
+
+<table  class="table table-bordered table-condensed table-responsive">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>View More Details</th>
+      <th>Email</th>
+      <th>CREATED AT</th>
+      <th>UPDATED AT</th>
+    </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let user of $users">
+       <td>{{user.id}}</td>
+       <td>
+         <a  (click)="onSelect(user)">{{user.name}}</a>
+        <!-- <a routerLink="/details/{{user.id}}">{{user.name}}</a> -->
+       </td>
+       <td>{{user.email}}</td>
+       <td>{{user.created_at}}</td>
+       <td>{{user.created_at}}</td>
+     </tr>
+  </tbody>
+</table>

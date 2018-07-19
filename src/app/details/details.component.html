@@ -1,0 +1,20 @@
+
+  <div>
+
+      <h1> You Selected User With id = {{ userId }}</h1>
+      <ul>
+          <li *ngFor="let user of $user">
+              <p><strong>Name:</strong> {{ user.name }}</p>
+              <p><strong>Email:</strong> {{ user.email }}</p>
+          </li>
+      </ul>
+      <hr>
+      <div class="row">
+          <div class="col-sm-6">
+              <a class="pull-left btn btn-success" (click)="goPrevious()">Previous</a>
+              <a class="pull-right btn btn-success" (click)="goNext()">Next</a>
+          </div>
+      </div>
+
+      
+  </div>

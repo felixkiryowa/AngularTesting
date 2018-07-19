@@ -3,16 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PostsComponent } from './posts/posts.component';
+import { UsersComponent } from './users/users.component';
+import { DetailsComponent } from './details/details.component';
+import {DataService} from './data.service';
+import {HttpClientModule} from '@angular/common/http';
+import {MyResolver} from './my-resolver';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PostsComponent,
+    UsersComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, HttpClientModule
   ],
-  providers: [],
+  providers: [DataService, MyResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
