@@ -17,6 +17,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RequestResetComponent } from './components/password/request-reset/request-reset.component';
 import { ResponseResetComponent } from './components/password/response-reset/response-reset.component';
 
+import {FormsModule} from '@angular/forms';
+import {AuthServiceService} from './service/auth-service.service';
+import {TokenService} from './service/token.service';
+
 
 @NgModule({
   declarations: [
@@ -34,9 +38,9 @@ import { ResponseResetComponent } from './components/password/response-reset/res
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule
+    AppRoutingModule, HttpClientModule, FormsModule, HttpClientModule
   ],
-  providers: [DataService, MyResolver],
+  providers: [DataService, MyResolver, AuthServiceService, TokenService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
